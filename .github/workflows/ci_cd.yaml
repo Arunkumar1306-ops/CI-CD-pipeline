@@ -26,3 +26,19 @@ jobs:
        - name: Run Unit Tests
          run: mvn test
 
+
+   file-system scanning:
+        runs-on: ubuntu-latest
+        need: compile
+
+        steps:
+
+        - name: Run Security Scan
+          uses: anantacloud-actions/trivy@v1
+          with:
+            scan-type: 'fs'
+            scan-target: .
+            exit-code: 0
+            severity: 'HIGH,CRITICAL'
+            format: table
+            trivy-version: latest

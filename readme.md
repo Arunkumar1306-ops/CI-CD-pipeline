@@ -10,13 +10,27 @@ Unit tests are the smallest level of automated testing in software development. 
 
 
 
+
+
 mvn clean install
 
-clean → deletes old compiled files (ensures a fresh build).
+mvn clean install
 
-install → compiles the code, runs tests, packages the app (like a .jar or .war), and installs it into your local Maven repository (~/.m2).
+Runs the full build lifecycle:
+
+clean → wipes old build artifacts.
+
+compile → compiles source code.
+
+test → runs unit tests.
+
+package → creates .jar/.war.
+
+install → puts the artifact in your local Maven repo (~/.m2).
 
 This is the standard way to build a Java project with Maven.
+
+
 
 mvn test
 
