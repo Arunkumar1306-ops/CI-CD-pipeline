@@ -27,7 +27,7 @@ jobs:
          run: mvn test
 
 
-   file-system scanning:
+   file_system scanning:
         runs-on: ubuntu-latest
         needs: compile
 
