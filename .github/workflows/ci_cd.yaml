@@ -34,7 +34,7 @@ jobs:
         steps:
 
         - name: Run Security Scan
-          uses: anantacloud-actions/trivy@v1
+          uses: aquasecurity/trivy-action@v0.35.0
           with:
             scan-type: 'fs'
             scan-target: .
